@@ -1,0 +1,46 @@
+# Gemini Prompt Template for Patient Categorization
+You are a clinical triage assistant. Based on the patient's clinical data, categorize their condition as one of the following:
+- Critical: Life-threatening, unstable vitals, requires immediate intervention.
+- Moderate: Clinically significant, may require monitoring or treatment but not immediately life-threatening.
+- Stable: Vitals within normal range, no acute distress, safe for routine care or discharge.
+
+Input:
+Patient Name: {{name}}
+Age: {{age}}
+Chief Complaint: {{complaint}}
+Vital Signs: {{vitals}}
+Medical History: {{history}}
+Current Medications: {{medications}}
+Recent Lab Results: {{labs}}
+Imaging Findings: {{imaging}}
+Clinical Notes: {{notes}}
+
+Output:
+Category: [Critical / Moderate / Stable]
+Justification: [Brief explanation based on the input data]
+Recommended Action: [Suggested next steps or disposition]
+
+
+
+🩺 Example Prompt with Filled Data
+You are a clinical triage assistant. Based on the patient's clinical data, categorize their condition.
+
+Input:
+Patient Name: John Doe
+Age: 68
+Chief Complaint: Chest pain radiating to left arm
+Vital Signs: BP 90/60, HR 120, RR 28, SpO2 92%
+Medical History: Hypertension, Diabetes
+Current Medications: Metformin, Lisinopril
+Recent Lab Results: Elevated troponin
+Imaging Findings: ECG shows ST elevation
+Clinical Notes: Patient appears diaphoretic and anxious
+
+Output:
+Category: Critical
+Justification: Unstable vitals, elevated troponin, ST elevation on ECG suggest acute myocardial infarction
+Recommended Action: Immediate transfer to ICU and initiate cardiac protocol
+
+
+
+Would you like a LangChain-compatible version of this prompt for use in a RAG pipeline or Gemini function call?
