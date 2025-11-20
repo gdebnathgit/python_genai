@@ -1,2 +1,3 @@
-embedding = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
-vectorstore = Chroma.from_documents(chunks, embedding)
+ result = classify_patient(row_json)
+    print("Classification Result:")
+    print(result)
